@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 #git@github.com:paulbhart/toggleairport.git
 #originally from https://gist.github.com/albertbori/1798d88a93175b9da00b
 
@@ -57,7 +57,7 @@ if [ -f "/var/tmp/prev_air_on" ]; then
 fi
 
 # Check actual current ethernet status
-for eth_name in ${eth_names}; do
+for eth_name in "${(f)eth_names}"; do
     if ([ "$eth_name" != "" ] && [ "`ifconfig $eth_name | grep "status: active"`" != "" ]); then
         eth_status="On"
     fi
@@ -96,7 +96,7 @@ else
 fi
 
 # Update ethernet status
-if [ "$eth_status" == "On" ]; then
+if [ "${eth_status}" = "On" ]; then
     touch /var/tmp/prev_eth_on
 else
     if [ -f "/var/tmp/prev_eth_on" ]; then

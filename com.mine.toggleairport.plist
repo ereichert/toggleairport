@@ -8,7 +8,7 @@
   <true/>
   <key>ProgramArguments</key>
   <array>
-    <string>/Library/Scripts/toggleAirport.sh</string>
+    <string>/Library/Scripts/toggleAirport</string>
   </array>
   <key>WatchPaths</key>
   <array>

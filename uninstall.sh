@@ -2,7 +2,7 @@
 #git@github.com:paulbhart/toggleairport.git
 #originally from https://gist.github.com/albertbori/1798d88a93175b9da00b
 
-sudo rm /Library/Scripts/toggleAirport.sh
+sudo rm /Library/Scripts/toggleAirport
 launchctl unload /Library/LaunchAgents/com.mine.toggleairport.plist
 sudo rm  /Library/LaunchAgents/com.mine.toggleairport.plist
 
